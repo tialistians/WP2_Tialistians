@@ -1,12 +1,12 @@
 <html>
+
 <head>
     <title>Form Input Matakuliah</title>
 </head>
 
 <body>
     <center>
-        <form action="<?= base_url('matakuliah/cetak'); ?>"
-method="post">
+        <form action="<?= base_url('matakuliah/cetak');       ?>" method="post">
             <table>
                 <tr>
                     <th colspan="3">
@@ -25,6 +25,7 @@ method="post">
                         <input type="text" name="kode" id="kode">
                     </td>
                 </tr>
+                <?= form_error('kode'); ?>
                 <tr>
                     <th>Nama MTK</th>
                     <td>:</td>
@@ -32,6 +33,7 @@ method="post">
                         <input type="text" name="nama" id="nama">
                     </td>
                 </tr>
+                <?= form_error('nama'); ?>
                 <tr>
                     <th>SKS</th>
                     <td>:</td>
@@ -46,4 +48,12 @@ method="post">
                 </tr>
                 <tr>
                     <td colspan="3" align="center">
-                        <inp
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+
+</html>
